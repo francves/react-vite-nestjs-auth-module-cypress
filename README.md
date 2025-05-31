@@ -1,17 +1,17 @@
-# Red Social - Registro y Login
+# Social Network - Register and Login
 
-Este proyecto es una aplicación web que implementa un sistema de registro y login de usuarios para una red social. Está construido con React en el frontend y Nest.js en el backend, utilizando MongoDB como base de datos.
+This project is a web application that implements a user registration and login system for a social network. It is built with React for the frontend and Nest.js for the backend, using MongoDB as the database.
 
-## Características
+## Features
 
-- Registro de usuarios
-- Inicio de sesión con JWT
-- Dashboard protegido
-- Interfaz de usuario moderna con Material-UI
-- Validación de formularios
-- Autenticación segura
+- User registration
+- Login with JWT
+- Protected dashboard
+- Modern user interface with Material-UI
+- Form validation
+- Secure authentication
 
-## Tecnologías Utilizadas
+## Technologies Used
 
 ### Frontend
 - React
@@ -24,83 +24,83 @@ Este proyecto es una aplicación web que implementa un sistema de registro y log
 ### Backend
 - Nest.js
 - TypeScript
-- MongoDB con Mongoose
-- JWT para autenticación
+- MongoDB with Mongoose
+- JWT for authentication
 - Passport.js
 
-## Requisitos Previos
+## Prerequisites
 
-- Node.js (v14 o superior)
+- Node.js (v14 or higher)
 - MongoDB
-- npm o yarn
+- npm or yarn
 
-## Instalación
+## Installation
 
-1. Clonar el repositorio:
+1. Clone the repository:
 ```bash
-git clone https://github.com/tu-usuario/red-social-registro-login.git
-cd red-social-registro-login
+git clone https://github.com/francves/react-vite-nestjs-auth-module-cypress.git
+cd react-vite-nestjs-auth-module-cypress
 ```
 
-2. Instalar dependencias del backend:
+2. Install backend dependencies:
 ```bash
 cd backend
 npm install
 ```
 
-3. Instalar dependencias del frontend:
+3. Install frontend dependencies:
 ```bash
 cd ../frontend
 npm install
 ```
 
-## Configuración
+## Configuration
 
-1. Asegúrate de tener MongoDB ejecutándose en tu máquina local o configura la URL de conexión en `backend/src/app.module.ts`
+1. Make sure MongoDB is running locally or update the connection URL in `backend/src/app.module.ts` if using a remote database.
 
-2. El backend se ejecutará en `http://localhost:3000`
-3. El frontend se ejecutará en `http://localhost:5173`
+2. The backend will run at `http://localhost:3000`
+3. The frontend will run at `http://localhost:5173`
 
-## Ejecución
+## Running the Project
 
-1. Iniciar el backend:
+1. Start the backend:
 ```bash
 cd backend
 npm run start:dev
 ```
 
-2. Iniciar el frontend:
+2. Start the frontend:
 ```bash
 cd frontend
 npm run dev
 ```
 
-## Estructura del Proyecto
+## Project Structure
 
 ```
-├── backend/               # Backend Nest.js
+├── backend/               # Nest.js Backend
 │   ├── src/
-│   │   ├── auth/         # Módulo de autenticación
-│   │   ├── users/        # Módulo de usuarios
-│   │   └── main.ts       # Punto de entrada
+│   │   ├── auth/         # Authentication module
+│   │   ├── users/        # Users module
+│   │   └── main.ts       # Entry point
 │   └── package.json
 │
-└── frontend/             # Frontend React
+└── frontend/             # React Frontend
     ├── src/
-    │   ├── components/   # Componentes React
-    │   ├── App.tsx      # Componente principal
-    │   └── main.tsx     # Punto de entrada
+    │   ├── components/   # React components
+    │   ├── App.tsx      # Main component
+    │   └── main.tsx     # Entry point
     └── package.json
 ```
 
-## Contribuir
+## Contributing
 
-1. Fork el proyecto
-2. Crea tu rama de características (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Licencia
+## License
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles. 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
