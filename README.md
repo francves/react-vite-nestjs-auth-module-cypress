@@ -9,7 +9,9 @@ This project is a web application that implements a user registration and login 
 - Protected dashboard
 - Modern user interface with Material-UI
 - Form validation
-- Secure authentication
+- Automated testing with Cypress
+- RESTful API
+- MongoDB database
 
 ## Technologies Used
 
@@ -20,6 +22,7 @@ This project is a web application that implements a user registration and login 
 - Formik & Yup
 - React Router
 - Axios
+- Cypress (E2E testing)
 
 ### Backend
 - Nest.js
@@ -54,12 +57,12 @@ cd ../frontend
 npm install
 ```
 
-## Configuration
-
-1. Make sure MongoDB is running locally or update the connection URL in `backend/src/app.module.ts` if using a remote database.
-
-2. The backend will run at `http://localhost:3000`
-3. The frontend will run at `http://localhost:5173`
+4. Configure environment variables:
+   - Create `.env` file in the `backend` folder with the following variables:
+   ```
+   MONGODB_URI=mongodb://localhost:27017/social-network
+   JWT_SECRET=your_jwt_secret
+   ```
 
 ## Running the Project
 
@@ -75,23 +78,61 @@ cd frontend
 npm run dev
 ```
 
+3. Run Cypress tests:
+```bash
+cd frontend
+npm run cypress:open
+```
+
 ## Project Structure
 
 ```
-├── backend/               # Nest.js Backend
+react-vite-nestjs-auth-module-cypress/
+├── frontend/
 │   ├── src/
-│   │   ├── auth/         # Authentication module
-│   │   ├── users/        # Users module
-│   │   └── main.ts       # Entry point
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── App.tsx
+│   ├── cypress/
+│   │   ├── e2e/
+│   │   │   ├── register.cy.ts
+│   │   │   └── login.cy.ts
+│   │   └── support/
 │   └── package.json
-│
-└── frontend/             # React Frontend
+└── backend/
     ├── src/
-    │   ├── components/   # React components
-    │   ├── App.tsx      # Main component
-    │   └── main.tsx     # Entry point
+    │   ├── users/
+    │   ├── auth/
+    │   └── main.ts
     └── package.json
 ```
+
+## Testing
+
+The project includes automated tests with Cypress for registration and login functionalities. The tests are located in:
+
+- `frontend/cypress/e2e/register.cy.ts`: Tests for the registration process
+- `frontend/cypress/e2e/login.cy.ts`: Tests for the login process
+
+To run the tests:
+```bash
+cd frontend
+npm run cypress:open
+```
+
+## API Endpoints
+
+### Users
+- `POST /users` - Create new user
+- `GET /users` - Get all users
+- `GET /users/:id` - Get user by ID
+- `PUT /users/:id` - Update user
+- `DELETE /users/:id` - Delete user
+
+### Authentication
+- `POST /auth/login` - Login
+- `POST /auth/register` - Register new user
 
 ## Contributing
 
